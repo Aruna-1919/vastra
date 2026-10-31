@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html, body { background: #000; color: #fff; font-family: var(--font-sans); }
+
+@keyframes flyOutRight { from { transform: translateX(0); } to { transform: translateX(250%); } }
+@keyframes flyInLeft { from { transform: translateX(-250%); } to { transform: translateX(0); } }
+@keyframes flyOutUp { from { transform: translateY(0); } to { transform: translateY(-150%); } }
+@keyframes flyInUp { from { transform: translateY(150%); } to { transform: translateY(0); } }
+
+.arrow-out { animation: flyOutRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.arrow-in { animation: flyInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.text-out { animation: flyOutUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.text-in { animation: flyInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
